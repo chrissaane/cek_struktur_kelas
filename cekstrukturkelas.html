@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Struktur Kelas</title>
+</head>
+<body>
+    <h1>Cek Sruktur Kelas X PPLG 1</h1>
+    <label for="">Struktur Kelas</label><br>
+    <select id="mode">
+        <option value="Ketua">Ketua</option>
+        <option value="Wakil">Wakil</option>
+        <option value="Sekertaris">Sekertaris</option>
+        <option value="Bendahara">Bendahara</option>
+        <option value="Skebersihan">Seksi Kebersihan</option>
+        <option value="Sketertiban">Seksi Ketertiban</option>
+        <option value="Skeamanan">Seksi Keamanan</option>
+        <option value="Skeagamaan">Seksi Keagamaan</option>
+    </select><br>
+    <button onclick="cek()">Cek</button>
+    <div id="output"></div>
+
+
+    <script>
+        const mode = document.getElementById('mode');
+        const output = document.getElementById('output');
+
+
+        function cek(){
+            let chat = '';
+            if (mode.value == "Ketua") {
+                chat = 'Ketua Kelas X PPLG 1 adalah:<br>-Aza';
+            } else if (mode.value == "Wakil") {
+                chat = 'Wakil Ketua Kelas X PPLG 1 adalah:<br>-Luki';
+            } else if (mode.value == "Sekertaris") {
+                chat = 'Sekertaris X PPLG 1 adalah:<br>-Ike<br>-Fira';
+            } else if (mode.value == "Bendahara") {
+                chat = 'Bendahara X PPLG 1 adalah:<br>-Askia<br>-Nata';
+            } else if (mode.value == "Skebersihan") {
+                chat = 'Seksi Kebersihan X PPLG 1 adalah:<br>-Hana<br>-Fani';
+            } else if (mode.value == "Sketertiban") {
+                chat = 'Seksi Ketertiban X PPLG 1 adalah:<br>-Angen<br>-Allea';
+            } else if (mode.value == "Skeamanan") {
+                chat = 'Seksi Keamanan X PPLG 1 adalah:<br>-Gilang<br>-Rico';
+            } else if (mode.value == "Skeagamaan") {
+                chat = 'Seksi Keagamaan X PPLG 1 adalah:<br>-Saka<br>-Afrian';
+            }
+            output.innerHTML = chat;
+        }
+    </script>
+</body>
+</html>
